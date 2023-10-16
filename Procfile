@@ -1,1 +1,1 @@
-web: node ParseServer.js
+web: node index.js
