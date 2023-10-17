@@ -12,7 +12,7 @@ export const config = {
     process.env.DATABASE_URI || process.env.MONGODB_URI || 'mongodb+srv://farhanfaqir29963:rzg6yiotKv1kxVxJ@parse-server-db.48heilu.mongodb.net/?retryWrites=true&w=majority',
   cloud: process.env.CLOUD_CODE_MAIN,
   appId: process.env.APP_ID || 'myAppId',
-  masterKey: process.env.MASTER_KEY || 'testMasterKey', //Add your master key here. Keep it secret!
+  masterKey: process.env.MASTER_KEY || 'myMasterKey', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'https://parse-examplee-4e3e5b772e84.herokuapp.com/parse', // Don't forget to change to https if needed
   liveQuery: {
     classNames: ['Posts', 'Comments'], // List of classes to support for query subscriptions
