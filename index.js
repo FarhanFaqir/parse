@@ -6,16 +6,20 @@ import http from 'http';
 import dotenv from 'dotenv';
 dotenv.config();
 
+// parse-dashboard --dev --appId myAppId --masterKey testMasterKey --serverURL "https://parse-examplee-4e3e5b772e84.herokuapp.com/parse" --appName test-parse-server
 export const config = {
   databaseURI:
     process.env.DATABASE_URI || process.env.MONGODB_URI || 'mongodb+srv://farhanfaqir29963:rzg6yiotKv1kxVxJ@parse-server-db.48heilu.mongodb.net/?retryWrites=true&w=majority',
   cloud: process.env.CLOUD_CODE_MAIN,
   appId: process.env.APP_ID || 'myAppId',
-  masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
-  serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse', // Don't forget to change to https if needed
+  masterKey: process.env.MASTER_KEY || 'testMasterKey', //Add your master key here. Keep it secret!
+  serverURL: process.env.SERVER_URL || 'https://parse-examplee-4e3e5b772e84.herokuapp.com/parse', // Don't forget to change to https if needed
   liveQuery: {
     classNames: ['Posts', 'Comments'], // List of classes to support for query subscriptions
   },
+  allowClientClassCreation : true,
+  allowExpiredAuthDataToken : true
+
 };
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
